@@ -1,0 +1,98 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "3e8c5fc2-4bdd-495b-b3e9-504651fa1bf3": {
+        "id": "3e8c5fc2-4bdd-495b-b3e9-504651fa1bf3",
+        "parent": null,
+        "name": "hirusample",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "56f77d9c-d298-445f-a56f-9b59eda0d8cb"
+        ],
+        "isRemovable": false,
+        "filePath": "hirusample"
+      },
+      "56f77d9c-d298-445f-a56f-9b59eda0d8cb": {
+        "id": "56f77d9c-d298-445f-a56f-9b59eda0d8cb",
+        "parent": "3e8c5fc2-4bdd-495b-b3e9-504651fa1bf3",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hirusample/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    console.log(\"success\")\n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "s3hirutest01",
+            "config": {
+              "type": "s3:ObjectCreated:*",
+              "keyPrefix": "",
+              "keySuffix": ""
+            }
+          }
+        ]
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "3e8c5fc2-4bdd-495b-b3e9-504651fa1bf3",
+    "openFiles": [
+      "56f77d9c-d298-445f-a56f-9b59eda0d8cb"
+    ],
+    "currentFileId": "56f77d9c-d298-445f-a56f-9b59eda0d8cb",
+    "resources": {
+      "s3hirutest01": {
+        "name": "s3hirutest01",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-2",
+            "name": "hiru.test01"
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "hirusample",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-2",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1572948917463
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "hirusample",
+      "url": "https://github.com/HirudineeADRT/hirusample"
+    }
+  }
+}
